@@ -26,8 +26,9 @@ body {
 }
 
 .banner {
-    background-image: url(https://wallpaperaccess.com/full/196851.png);
+    background-image: url(https://galaxykidscodeclub.com/wp/wp-content/uploads/2020/05/roblox-raining-money.png);
     background-size: cover;
+    background-position-x: 50%;
     width: auto;
     flex-grow: 1;
 }
