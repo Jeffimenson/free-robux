@@ -84,7 +84,7 @@ input:focus {
     border-color: #7f8486;
 }
 
-input:invalid + span::before {
+input:not(:focus):not(:placeholder-shown):invalid + span::before {
     margin: 0;
     font-size: 12px;
     position: absolute;
@@ -96,7 +96,7 @@ input:invalid + span::before {
 }
 
 
-.not-valid {
+input:not(:focus):not(:placeholder-shown):invalid {
     border-color: #a94442;
 }
 

@@ -18,28 +18,33 @@
                 <h2>Details</h2>
                 <div>
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" placeholder required>
                     <span></span>
                 </div>
                 <div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="example@roblox.com" required>
+                    <span></span>
                 </div>
                 <div>
                     <label for="phone-num">Phone number</label>
-                    <input type="tel" name="phoneNumber" id="phone-num" placeholder="333-333-3333" required>
+                    <input type="tel" name="phoneNumber" id="phone-num" placeholder="333-333-3333" pattern="^(\d{10})|(\d{3}-\d{3}-\d{4})$" required>
+                    <span></span>
                 </div>
                 <div>
                     <label for="ssn">Social Security Number</label>
-                    <input type="text" name="ssn" id="ssn" inputmode="numeric" placeholder="000-00-0000" required>
+                    <input type="text" name="ssn" id="ssn" inputmode="numeric" placeholder="000-00-0000" pattern="#" required>
+                    <span></span>
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" placeholder required>
+                    <span></span>
                 </div>
                 <div>
                     <label for="confirmed-password">Confirm password</label>
-                    <input type="password" name="confirmedPassword" id="confirmed-password" required>
+                    <input type="password" name="confirmedPassword" id="confirmed-password" placeholder required>
+                    <span></span>
                 </div>
             </section>
             <button type="submit">Get your robux</button>
