@@ -62,6 +62,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    overflow-y: auto;
 }
 
 main p {
@@ -120,7 +122,7 @@ input:focus {
     border-color: #7f8486;
 }
 
-input:not(:focus):not(:placeholder-shown):invalid + span::before {
+input:not(:focus):not(:placeholder-shown):not(#password):not(#confirmed-password):invalid + span::before {
     margin: 0;
     font-size: 12px;
     position: absolute;
@@ -131,10 +133,28 @@ input:not(:focus):not(:placeholder-shown):invalid + span::before {
     content: 'No';
 }
 
-
 input:not(:focus):not(:placeholder-shown):invalid {
     border-color: #a94442;
 }
+
+#password.password-mismatch:not(:focus):invalid + span::before {
+    margin: 0;
+    font-size: 12px;
+    position: absolute;
+
+    bottom: -16px;
+    color: #f74b52;
+    
+    content: 'Passwords do not match -_-';
+
+}
+
+.password-mismatch:not(:focus):invalid {
+    border-color: #a94442;
+}
+
+
+
 
 
 button[type='submit']{
@@ -149,6 +169,8 @@ button[type='submit']{
     font-family: inherit;
 
     width: min(250px, 40vw);
+
+    transition: background-color 0.4s;
 }
 
 
@@ -157,6 +179,7 @@ button[type='submit']:hover{
     border-color: black;
     cursor: pointer;
 
+    background-color: rgb(208, 238, 214);
 }
 
 
